@@ -1,0 +1,5 @@
+body{
+    background:linear-gradient(
+        to left
+        red,rgba(64, 114, 52, 0.114));
+}
