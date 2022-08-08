@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        function fnlrk(){
+            var l=document.getElementById("l").value;
+            var r=document.getElementById("r").value;
+            var k=document.getElementById("k").value;
+            if(l<=r){
+                let count=0;
+                for(let i=l;l<=r;i++){
+                    if(i%k==0){
+                        count=count+1;
+                    }
+                }
+                document.getElementById("p").innerHTML=count;
+            }
+            else{
+                document.getElementById("p").innerHTML="error";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <button onclick="fnlrk">Click</button>
+    <input type="text" name="l" id="r/><br/>
+    <p id="p"></p>
+</body>
+</html>

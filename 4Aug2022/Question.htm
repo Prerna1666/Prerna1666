@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+        background: linear-gradient(rgba(0, 0, 255, 0.158),rgba(255, 238, 0, 0.235));background-repeat:no-repeat;background-size: cover ;height: 100vh;
+    }
+    
+    #input{
+        color: rgba(1, 1, 105, 0.47);
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #square{
+        margin-top: 30px;
+        justify-content: center;
+        /*margin-left:42%;*/
+        border-color: black;
+    }
+    </style>
+<script>
+
+function fnclick(){  
+let a = document.getElementById('num').value;
+if(isNaN(a)){
+    alert("Enter a numerical Value!")
+}
+else{
+a=Number(a);
+var sum=0;
+var count =0;
+while(a>0){
+var rem = a%10;
+sum +=rem;
+a=Math.floor(a/10);
+count ++;
+}
+
+if(count!=5){
+    alert("Enter a 5 digit number!")
+}else{
+console.log(sum);
+var BRadius = Math.floor(sum/5);
+sum=sum*10;
+BRadius=BRadius*10;
+document.getElementById('square').style.height= sum + "px";
+document.getElementById('square').style.width= sum +"px";
+document.getElementById('square').style.backgroundColor="rgba(1, 1, 105, 0.32)";
+document.getElementById('square').style.transition="all 4s";
+document.getElementById('square').style.borderRadius= BRadius +"px";
+}
+}
+}
+</script>
+</head>
+<body>
+    
+
+<div id="input">
+<h1>Enter a five digit number to create a square shape:</h1>
+<br>
+<input type="text" name="n1" id="num"><br><br>
+
+<button onclick="fnclick()">Click</button>
+
+</div>
+<div id="square">
+</div>
+</body>
+</html>
